@@ -114,6 +114,12 @@ inline pybind11::array_t<double> get_distance_matrix_np(Tree &tree) {
     auto result = pybind11::array_t<double>({n, n});
     auto r = result.mutable_unchecked<2>();  // for fast access
 
+    for (size_t i = 0; i < n; ++i) {
+        for (size_t j = 0; j < n; ++j) {
+            r(i, j) = 0.0;
+        }
+    }
+
     #pragma omp parallel for schedule(dynamic)
     for (long long idx = 0; idx < static_cast<long long>(tree.sorted_nodes.size()); ++idx) {
         const auto& node = tree.sorted_nodes[idx];
