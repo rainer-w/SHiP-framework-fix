@@ -1,3 +1,16 @@
+## Modification
+
+This repository is based on the original [SHiP-framework](https://github.com/pasiweber/SHiP-framework) by Pascal Weber.
+
+It contains a fix in the DCTree distance-matrix implementation: the distance matrix is explicitly initialized before being populated in parallel. This prevents uninitialized values from occurring in the resulting distance matrix.
+
+All original SHiP functionality is otherwise preserved.
+
+The original project is licensed under the BSD 3-Clause License. The original copyright notice and license are retained in this repository.
+
+
+
+
 # Similarity-Hierarchical-Partitioning (SHiP) Clustering Framework
 [![PyPI version](https://badge.fury.io/py/SHiP-framework.svg)](https://pypi.org/project/SHiP-framework/)
 [![Tests](https://github.com/pasiweber/SHiP-framework/actions/workflows/publish_to_pypi.yml/badge.svg)](https://github.com/pasiweber/SHiP-framework/actions/workflows/publish_to_pypi.yml)

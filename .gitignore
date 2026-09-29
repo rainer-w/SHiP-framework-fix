@@ -17,3 +17,6 @@ docs/doxygen
 
 # stub files will be generated automatically, do not track them
 /SHiP/
+ship-env/
+.venv/ship-env/
+.venv/
